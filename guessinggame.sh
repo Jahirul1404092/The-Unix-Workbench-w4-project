@@ -1,16 +1,16 @@
 function guessinggame {
 
-number=5
+number_of_files=$(ls | wc -l)
 
 while [[ true ]]
 do
   echo "how many files are in the current directory?"
   read var
-  if [[ $var -eq $number ]]
+  if [[ $var -eq $number_of_files ]]
     then
-      echo "congratulations"
+      echo "congratulations!! current directory has $var files"
       break
-  elif [[ $var -gt $number ]]
+  elif [[ $var -gt $number_of_files ]]
     then
       echo "Too high"
   else
